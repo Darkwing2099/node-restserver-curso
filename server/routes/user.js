@@ -16,12 +16,6 @@ app.get('/usuario', function(req, res) {
         status: true
     }
 
-    // let response = {
-    //     name: "Juanito Perez",
-    //     area: "Operaciones",
-    //     position: "Diseño",
-    //     picture_url: "url"
-    // }
     User.find(filter, 'name email role status google img')
         .skip(from)
         .limit(limit)
